@@ -94,6 +94,27 @@ yarn dev
 
 ### Open the code and start customizing
 
+### OR The Docker setup
+Build the docker image
+```shell
+docker build -t medusa-storefront .
+```
+
+And run the container
+```shell
+docker run -p 8000:8000 --name medusa-storefront -d --env-file .env.local medusa-storefront
+```
+
+See the logs
+```shell
+docker logs -f medusa-storefront
+```
+
+Stop the container
+```shell
+docker stop medusa-storefront
+```
+
 Your site is now running at http://localhost:8000!
 
 # Payment integrations
